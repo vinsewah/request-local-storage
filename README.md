@@ -1,4 +1,4 @@
-# request-local-storage
+# request-local-storage [![Build Status][build-badge-img]][build-url]
 
 This module uses
 [continuation-local-storage](https://github.com/othiym23/node-continuation-local-storage)
@@ -65,3 +65,6 @@ Need to patch `Q` or some other package?  No problem!
 ```javascript
 RequestLocalStorage.patch(require('cls-q'));
 ```
+
+[build-badge-img]: https://travis-ci.org/redfin/request-local-storage.png?branch=master
+[build-url]: https://travis-ci.org/redfin/request-local-storage
