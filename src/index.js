@@ -2,11 +2,13 @@ if (SERVER_SIDE){
 	var key          = '_request_local_storage_'
 	,   cls          = require('continuation-local-storage').createNamespace(key)
 	,   bind         = cls.bind.bind(cls)
+	,   patch        = func => func(cls)
 	,   getContainer = () => cls.get(key)
 	,   startRequest = (start) => { cls.run(() => {cls.set(key, []); start()}) }
 } else {
 	var container    = []
 	,   bind         = f  => f
+	,   patch        = () => {}
 	,   getContainer = () => container
 	,   startRequest = () => container = []
 }
@@ -44,4 +46,4 @@ var namespaces         = 0
 	return getter;
 }
 
-module.exports = { getNamespace, getCountNamespaces, startRequest, bind };
+module.exports = { getNamespace, getCountNamespaces, startRequest, bind, patch };

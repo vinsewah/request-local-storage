@@ -33,6 +33,8 @@ function getInstance() {
 
 It's easy!
 
+#### Server
+
 Say you have a request handling function that looks like:
 
 ```javascript
@@ -51,7 +53,15 @@ function handle(req, res, next) { RequestLocalStorage.startRequest(() => {
 }}
 ```
 
+#### Browser
+
 In the browser you don't need to wrap a function.  Just call
 `RequestLocalStorage.startRequest()` whenever you start a new request.
 
+### Patching 3rd party packages
 
+Need to patch `Q` or some other package?  No problem!
+
+```javascript
+RequestLocalStorage.patch(require('cls-q'));
+```
