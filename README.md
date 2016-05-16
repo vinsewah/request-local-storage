@@ -1,4 +1,5 @@
-# request-local-storage [![Build Status][build-badge-img]][build-url]
+# request-local-storage
+[![Build Status][build-badge-img]][build-url] [![NPM version][npm-version-img]][npm-url] [![NPM license][npm-license-img]][npm-url] [![Powered by Redfin][redfin-img]][redfin-url]
 
 This module uses
 [continuation-local-storage](https://github.com/othiym23/node-continuation-local-storage)
@@ -66,5 +67,11 @@ Need to patch `Q` or some other package?  No problem!
 RequestLocalStorage.patch(require('cls-q'));
 ```
 
-[build-badge-img]: https://travis-ci.org/redfin/request-local-storage.png?branch=master
+[build-badge-img]: https://travis-ci.org/redfin/request-local-storage.svg?branch=master
 [build-url]: https://travis-ci.org/redfin/request-local-storage
+[npm-version-img]: https://badge.fury.io/js/request-local-storage.svg
+[npm-url]: https://npmjs.org/package/request-local-storage
+[redfin-url]: https://www.redfin.com
+[redfin-img]: https://img.shields.io/badge/Powered%20By-Redfin-c82021.svg
+[npm-license-img]: https://img.shields.io/npm/l/request-local-storage.svg
+
