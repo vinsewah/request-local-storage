@@ -67,6 +67,10 @@ Need to patch `Q` or some other package?  No problem!
 RequestLocalStorage.patch(require('cls-q'));
 ```
 
+### Find out more
+
+Check out the [design doc](/docs/design)
+
 [build-badge-img]: https://travis-ci.org/redfin/request-local-storage.svg?branch=master
 [build-url]: https://travis-ci.org/redfin/request-local-storage
 [npm-version-img]: https://badge.fury.io/js/request-local-storage.svg
@@ -74,4 +78,3 @@ RequestLocalStorage.patch(require('cls-q'));
 [redfin-url]: https://www.redfin.com
 [redfin-img]: https://img.shields.io/badge/Powered%20By-Redfin-c82021.svg
 [npm-license-img]: https://img.shields.io/npm/l/request-local-storage.svg
-
