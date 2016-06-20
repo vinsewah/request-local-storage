@@ -2,14 +2,17 @@
 
 Request local storage handles a particular problem, that of
 [high arity functions](https://en.wikipedia.org/wiki/Arity) in request/response
-objects and their associated callbacks.  As the author of an express middleware,
-your middleware is called off once on the way in with a request object, then you
-lose context, and then you are called again with the response object.  
-Generally, you start many asynchronous calls, that might in turn make function
-calls that take callbacks, and accumulate very long chains of callbacks, such
-that adding a new parameter to the last callback in the chain requires modifying
-many functions along the way.  Request local storage fixes this by implementing
-a [continuation](https://en.wikipedia.org/wiki/Continuation) which
+objects and their associated callbacks.  Often, to pass data between modules in
+a web appliation, you have to destructure large options arguments in many 
+functions before the data is actually used, many layers deep in the call stack.
+For instance, as the author of an express middleware, your middleware is called 
+once on the way in with a request object, then you lose context, and then you 
+are called again with the response object.  Generally, you start many 
+asynchronous calls, that might in turn make function calls that take callbacks, 
+and accumulate very long chains of callbacks, such that adding a new parameter 
+to the last callback in the chain requires modifying many functions along the 
+way.  Request local storage fixes this by implementing a 
+[continuation](https://en.wikipedia.org/wiki/Continuation) which
 [reifies](https://en.wikipedia.org/wiki/Reification_(computer_science)) the
 "thread" of execution.
 
