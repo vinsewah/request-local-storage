@@ -26,6 +26,8 @@ var namespaces         = 0
 		return container[i] || (container[i] = {});
 	})(namespaces++);
 
+	getter.isActive = () => !!getContainer();
+
 	// This is guarded against old versions of node that don't provide the
 	// necessary API (bamboo).
 	if (SERVER_SIDE && Object.observe) {
